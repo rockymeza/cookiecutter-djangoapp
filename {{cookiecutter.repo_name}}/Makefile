@@ -10,6 +10,7 @@ webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
 endef
 export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
+DJANGO_SETTINGS_MODULE ?= tests.settings
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
@@ -46,16 +47,16 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 {{ cookiecutter.module_name }} tests
+	$(MAKE) test PYTEST_OPTIONS='--flake8'
 
 test:
-	python setup.py test
+	DJANGO_SETTINGS_MODULE=$(DJANGO_SETTINGS_MODULE) py.test $(PYTEST_OPTIONS)
 
 test-all:
 	tox
 
 coverage:
-	coverage run --source {{ cookiecutter.module_name }} setup.py test
+	$(MAKE) test PYTEST_OPTIONS='--cov={{ cookiecutter.module_name }}'
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html

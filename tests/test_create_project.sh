@@ -18,8 +18,8 @@ echo "Running test script..."
 cookiecutter . --no-input
 (
     cd ./django-app
-    pip install -r requirements_dev.txt
-    python setup.py test
+    pip install -r requirements-test.txt
+    make test-all
     python travis_pypi_setup.py --repo rockymeza/cookiecutter-djangoapp --password invalidpass
     python -c '''import yaml
 assert "secure" in yaml.load(open(".travis.yml"))["deploy"]["password"],\
