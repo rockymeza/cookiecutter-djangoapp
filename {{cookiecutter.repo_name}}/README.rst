@@ -14,6 +14,8 @@
 
 {{ cookiecutter.project_short_description}}
 
+{{ cookiecutter.project_name }} runs on Django 1.8+ and Python 2.7, 3.3+.
+
 Quickstart
 ==========
 
