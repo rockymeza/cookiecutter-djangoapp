@@ -1,12 +1,8 @@
-============
 Installation
-============
+------------
 
-At the command line::
+1.  Install {{ cookiecutter.project_name }}.
 
-    $ easy_install {{ cookiecutter.repo_name }}
+        $ pip install {{ cookiecutter.repo_name }}
 
-Or, if you have virtualenvwrapper installed::
-
-    $ mkvirtualenv {{ cookiecutter.repo_name }}
-    $ pip install {{ cookiecutter.repo_name }}
+2.  Add ``{{ cookiecutter.module_name }}`` to your ``INSTALLED_APPS``.

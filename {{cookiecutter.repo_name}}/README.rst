@@ -1,6 +1,5 @@
-===============================
 {{ cookiecutter.project_name }}
-===============================
+{{ '-' * cookiecutter.project_name|length }}
 
 .. image:: https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg
         :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}
@@ -15,9 +14,15 @@
 
 {{ cookiecutter.project_short_description}}
 
-* Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org.
+Quickstart
+==========
 
-Features
---------
+1.  Install {{ cookiecutter.project_name }}.
 
-* TODO
+        $ pip install {{ cookiecutter.repo_name }}
+
+2.  Add ``{{ cookiecutter.module_name }}`` to your ``INSTALLED_APPS``.
+
+
+For more information, please view `{{ cookiecutter.project_name }} documentation
+<https://{{ cookiecutter.repo_name}}.readthedocs.org>`_.

@@ -6,7 +6,6 @@
 	"repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
 	"module_name": "{{ cookiecutter.repo_name.lower().replace('-', '_') }}",
 	"project_short_description": "Description",
-	"release_date": "2015-01-11",
 	"pypi_username": "{{ cookiecutter.github_username }}",
 	"year": "2015",
 	"version": "0.1.0",
