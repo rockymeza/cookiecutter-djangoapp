@@ -7,7 +7,7 @@ require() {
 }
 
 cleanup() {
-    rm -rf python_boilerplate
+    rm -rf django-app
 }
 trap cleanup EXIT
 
@@ -17,7 +17,7 @@ require cookiecutter
 echo "Running test script..."
 cookiecutter . --no-input
 (
-    cd ./python_boilerplate
+    cd ./django-app
     pip install -r requirements_dev.txt
     python setup.py test
     python travis_pypi_setup.py --repo rockymeza/cookiecutter-djangoapp --password invalidpass
