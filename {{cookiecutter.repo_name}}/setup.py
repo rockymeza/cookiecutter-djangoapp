@@ -33,7 +33,7 @@ setup(
     packages=find_packages(exclude=['docs', 'tests']),
     include_package_data=True,
     install_requires=requirements,
-    license="ISCL",
+    license="BSD",
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
@@ -41,7 +41,7 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: ISC License (ISCL)',
+        'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.6',
