@@ -15,7 +15,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    # TODO: put package requirements here
+    'Django>=1.8',
 ]
 
 test_requirements = [
@@ -42,6 +42,8 @@ setup(
     keywords='{{ cookiecutter.project_slug }}',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
+        'Environment :: Web Environment',
+        'Framework :: Django',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: ISC License (ISCL)',
         'Natural Language :: English',
